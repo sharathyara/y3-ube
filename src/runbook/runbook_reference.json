@@ -1,0 +1,85 @@
+[
+    {
+        "jobName": ["AvroFromS3ToMarketplaceHudiMultiTopic","AvroFromS3ToMarketplaceHudiWithMap"],
+        "jobStatus": "FAILED",
+        "runBookUrl": "https://yaradigitalfarming.atlassian.net/l/cp/4UYv32LG",
+        "runBookName": "#01 Glue: Raw to Conformed -- Restart - All Envs",
+        "notificationType": "Event",
+        "workflow": "Raw To Conformed"
+    },
+    {
+        "jobName": ["AvroFromS3ToMarketplaceHudiMultiTopic","AvroFromS3ToMarketplaceHudiWithMap"],
+        "jobStatus": "TIMEOUT",
+        "runBookUrl": "https://yaradigitalfarming.atlassian.net/l/cp/4UYv32LG",
+        "runBookName": "#01 Glue: Raw to Conformed -- Restart - All Envs",
+        "notificationType": "Event",
+        "workflow": "Raw To Conformed"
+    },
+    {
+        "jobName": ["HudiDIMapConformedToCurated","HudiFieldConformedToCurated","HudiDISeasonConformedToCurated","HudiDIUserConformedToCurated","HudiDIFieldConformedToCurated","HudiDIFarmConformedToCurated","HudiUserConformedToCurated","HudiSeasonConformedToCurated","HudiFarmConformedToCurated"],
+        "jobStatus": "FAILED",
+        "runBookUrl": "",
+        "runBookName": "#03 Glue: Creation in progress",
+        "notificationType": "Event",
+        "workflow": "Conformed To Curated"
+    },
+    {
+        "jobName": ["HudiDIMapConformedToCurated","HudiFieldConformedToCurated","HudiDISeasonConformedToCurated","HudiDIUserConformedToCurated","HudiDIFieldConformedToCurated","HudiDIFarmConformedToCurated","HudiUserConformedToCurated","HudiSeasonConformedToCurated","HudiFarmConformedToCurated"],
+        "jobStatus": "TIMEOUT",
+        "runBookUrl": "",
+        "runBookName": "#03 Glue: Creation in progress",
+        "notificationType": "Event",
+        "workflow": "Conformed To Curated"
+    },
+    {
+        "jobName": ["HudiDIMapConformedToCurated","HudiFieldConformedToCurated","HudiDISeasonConformedToCurated","HudiDIUserConformedToCurated","HudiDIFieldConformedToCurated","HudiDIFarmConformedToCurated","HudiUserConformedToCurated","HudiSeasonConformedToCurated","HudiFarmConformedToCurated"],
+        "jobStatus": "FAILED",
+        "runBookUrl": "",
+        "runBookName": "#04 Glue: Creation in progress",
+        "notificationType": "Event",
+        "workflow": "Curated To Redshift"
+    },
+    {
+        "jobName": ["HudiDIMapConformedToCurated","HudiFieldConformedToCurated","HudiDISeasonConformedToCurated","HudiDIUserConformedToCurated","HudiDIFieldConformedToCurated","HudiDIFarmConformedToCurated","HudiUserConformedToCurated","HudiSeasonConformedToCurated","HudiFarmConformedToCurated"],
+        "jobStatus": "TIMEOUT",
+        "runBookUrl": "",
+        "runBookName": "#04 Glue: Creation in progress",
+        "notificationType": "Event",
+        "workflow": "Curated To Redshift"
+    },
+    {
+        "jobName": ["FFDP-User-DeletionJob","FFDP-Field-DeletionJob","FFDP-Farm-DeletionJob"],
+        "jobStatus": "FAILED",
+        "runBookUrl": "",
+        "runBookName": "#05 Glue: Creation in progress",
+        "notificationType": "Event",
+        "workflow": "Deletion"
+    },
+    {
+        "jobName": ["HudiDIMapConformedToCurated","HudiFieldConformedToCurated","HudiDISeasonConformedToCurated","HudiDIUserConformedToCurated","HudiDIFieldConformedToCurated","HudiDIFarmConformedToCurated","HudiUserConformedToCurated","HudiSeasonConformedToCurated","HudiFarmConformedToCurated"],
+        "jobStatus": "TIMEOUT",
+        "runBookUrl": "",
+        "runBookName": "#05 Glue: Creation in progress",
+        "notificationType": "Event",
+        "workflow": "Deletion"
+    },
+    {
+        "jobName": ["lambda-event-notification-processing-alarm"],
+        "runBookUrl": "",
+        "runBookName": "#06 Lambda: Creation in progress",
+        "notificationType": "Alarm"
+    },
+    {
+        "jobName": ["managed-airflow-dag-failure"],
+        "runBookUrl": "",
+        "runBookName": "#07 MWAA: Creation in progress",
+        "notificationType": "Alarm"
+    },
+    {
+        "jobName": ["lambda_failure_notification_alarm"],
+        "runBookUrl": "",
+        "runBookName": "#08 Lambda: Creation in progress",
+        "notificationType": "Alarm"
+    }
+
+]

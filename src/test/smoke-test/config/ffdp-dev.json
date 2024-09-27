@@ -1,0 +1,8 @@
+{	
+	"MAPS_DATA_BUCKET_NAME" : "ffdp-maps-data-dev-479055760150",
+	"RAW_ZONE_BUCKET_NAME" : "ffdp-raw-data-dev-479055760150",
+	"CONFORMED_ZONE_BUCKET_NAME" : "ffdp-conform-data-dev-479055760150",
+	"CURATED_ZONE_BUCKET_NAME" : "ffdp-curated-data-dev-479055760150",
+	"METASTORE_DYNAMODB" : "RawEventEntity-dev",
+	"MWAA_ENVIRONMENT" : "ffdp-mwaa-dev"
+}

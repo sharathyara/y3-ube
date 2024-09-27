@@ -1,0 +1,15 @@
+{
+  "entity_event_types": "",
+  "entity_lock_file_name": "processing.lock",
+  "entity_processing_list_folder_name": "polaris_vra_performed-curated",
+  "entity_schema_location": "",
+  "entity_source_bucket_name": "ffdp-curated-data-dev-479055760150",
+  "glue_batch_max_limit": 1,
+  "glue_concurrency": 1,
+  "glue_job_name": "curator-redshift-job-eu-central-1b",
+  "hudi_partition_field": "created_at",
+  "hudi_precombine_field": "dateTimeOccurred",
+  "hudi_record_key": "eventId",
+  "hudi_table_name": "polaris_vra_performed",
+  "metastore_table_name": ""
+}

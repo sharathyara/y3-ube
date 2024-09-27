@@ -1,0 +1,116 @@
+FROM cnfldemos/cp-server-connect-datagen:0.5.3-7.1.0
+
+ARG kfk_cluster_user
+ARG kfk_cluster_pass
+ARG sr_user
+ARG sr_pass
+
+ENV kafka_cluster_user $kfk_cluster_user
+ENV kafka_cluster_pass $kfk_cluster_pass
+ENV schema_registry_user $sr_user
+ENV schema_registry_pass $sr_pass
+
+ENV CONNECT_BOOTSTRAP_SERVERS 'pkc-zpjg0.eu-central-1.aws.confluent.cloud:9092'
+ENV CONNECT_REST_ADVERTISED_HOST_NAME kafka-connect-ccloud
+ENV CONNECT_GROUP_ID compose-connect-group
+ENV CONNECT_CONFIG_STORAGE_TOPIC docker-connect-configs
+ENV CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR 1
+ENV CONNECT_OFFSET_FLUSH_INTERVAL_MS 10000
+ENV CONNECT_OFFSET_STORAGE_TOPIC docker-connect-offsets
+ENV CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR 1
+ENV CONNECT_STATUS_STORAGE_TOPIC docker-connect-status
+ENV CONNECT_STATUS_STORAGE_REPLICATION_FACTOR 1
+ENV CONNECT_KEY_CONVERTER org.apache.kafka.connect.storage.StringConverter
+ENV CONNECT_VALUE_CONVERTER io.confluent.connect.avro.AvroConverter
+ENV CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_URL https://psrc-8vyvr.eu-central-1.aws.confluent.cloud:8081
+ENV CONNECT_VALUE_CONVERTER_BASIC_AUTH_CREDENTIALS_SOURCE "USER_INFO"
+ENV CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO "$schema_registry_user:$schema_registry_pass"
+# CLASSPATH required due to CC-2422
+ENV CLASSPATH /usr/share/java/monitoring-interceptors/monitoring-interceptors-7.2.1.jar
+ENV CONNECT_PRODUCER_INTERCEPTOR_CLASSES "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor"
+ENV CONNECT_CONSUMER_INTERCEPTOR_CLASSES "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
+ENV CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR "3"
+ENV CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR "3"
+ENV CONNECT_STATUS_STORAGE_REPLICATION_FACTOR "3"
+ENV CONNECT_PLUGIN_PATH "/usr/share/java,/usr/share/confluent-hub-components,/etc/kafka-connect/jars"
+ENV CONNECT_LOG4J_LOGGERS org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
+ENV CONNECT_REQUEST_TIMEOUT_MS "20000"
+ENV CONNECT_RETRY_BACKOFF_MS "500"
+ENV CONNECT_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM "https"
+ENV CONNECT_SASL_MECHANISM "PLAIN"
+ENV CONNECT_SECURITY_PROTOCOL "SASL_SSL"
+ENV CONNECT_SASL_JAAS_CONFIG "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"$kafka_cluster_user\" password=\"$kafka_cluster_pass\";"
+ENV CONNECT_CONSUMER_SECURITY_PROTOCOL "SASL_SSL"
+ENV CONNECT_CONSUMER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM "https"
+ENV CONNECT_CONSUMER_SASL_MECHANISM "PLAIN"
+ENV CONNECT_CONSUMER_SASL_JAAS_CONFIG "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"$kafka_cluster_user\" password=\"$kafka_cluster_pass\";"
+ENV CONNECT_CONSUMER_REQUEST_TIMEOUT_MS "20000"
+ENV CONNECT_CONSUMER_RETRY_BACKOFF_MS "500"
+#
+ENV CONNECT_PRODUCER_SECURITY_PROTOCOL "SASL_SSL"
+ENV CONNECT_PRODUCER_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM "https"
+ENV CONNECT_PRODUCER_SASL_MECHANISM "PLAIN"
+ENV CONNECT_PRODUCER_SASL_JAAS_CONFIG "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"$kafka_cluster_user\" password=\"$kafka_cluster_pass\";"
+ENV CONNECT_PRODUCER_REQUEST_TIMEOUT_MS "20000"
+ENV CONNECT_PRODUCER_RETRY_BACKOFF_MS "500"
+
+COPY ./confluentinc-kafka-connect-s3-10.3.0 /etc/kafka-connect/jars/confluentinc-kafka-connect-s3
+
+CMD echo "Launching Kafka Connect worker"; \ 
+ /etc/confluent/docker/run & \
+ echo "Waiting for Kafka Connect to start listening on localhost:8083 ⏳"; \
+ while : ; do \
+	curl_status=$(curl -s -o /dev/null -w %{http_code} http://localhost:8083/connectors); \
+	echo -e $(date) " Kafka Connect listener HTTP state: $curl_status"; \
+	if [ $curl_status -eq 200 ] ; then \
+	break; \
+	fi; \
+	sleep 5; \
+ done; \
+ echo -e "\n--\n+> Creating Kafka Connect S3 sink connector: $kafka_connector_name"; \
+ echo Source Kafka Topics: "$kafka_topics_name"; \
+ echo DLQ Kafka Topic: $dlq_topic_name; \
+ echo Target S3 bucket: "$s3_bucket_name"; \
+ echo S3 bucket directory: "$s3_directory_path"; \
+ curl -i -X PUT -H "Accept:application/json" \
+            -H  "Content-Type:application/json" \
+            http://localhost:8083/connectors/$kafka_connector_name/config \
+            -d "{ \
+                \"connector.class\"                           : \"io.confluent.connect.s3.S3SinkConnector\",\
+                \"topics\"                                    : \"$kafka_topics_name\",\
+                \"errors.tolerance\"                          : \"all\",\
+                \"errors.deadletterqueue.topic.name\"         : \"$dlq_topic_name\",\
+                \"behavior.on.null.values\"                   : \"ignore\",\
+                \"tasks.max\"                                 : \"1\",\
+                \"value.converter.basic.auth.credentials.source\" : \"USER_INFO\",\
+                \"schema.registry.url\"                       : \"https://psrc-8vyvr.eu-central-1.aws.confluent.cloud\",\
+                \"s3.credentials.provider.class\"             : \"com.amazonaws.auth.DefaultAWSCredentialsProviderChain\",\
+                \"format.class\"                              : \"io.confluent.connect.s3.format.avro.AvroFormat\",\
+                \"value.converter\"                           : \"io.confluent.connect.avro.AvroConverter\",\
+                \"value.converter.schema.registry.url\"       : \"https://psrc-8vyvr.eu-central-1.aws.confluent.cloud\",\
+                \"value.converter.basic.auth.user.info\"      : \"$schema_registry_user:$schema_registry_pass\",\
+                \"schema.registry.basic.auth.user.info\"      : \"$schema_registry_user:$schema_registry_pass\",\
+                \"connector.class\"                           : \"io.confluent.connect.s3.S3SinkConnector\",\
+                \"flush.size\"                                : \"1000\",\
+                \"s3.part.size\"                              : \"5242880\",\
+                \"s3.bucket.name\"                            : \"$s3_bucket_name\",\
+                \"topics.dir\"                                : \"$s3_directory_path\",\
+                \"s3.region\"                                 : \"eu-central-1\",\
+				\"sts.role.arn\"                         	  : \"arn:aws:iam::479055760150:role/ConfluetnCloudSTSRole\",\
+                \"sts.role.external.id\"                      : \"QNkG!dgYdFN9fp!4_N7X\",\
+				\"sts.role.session.name\"                     : \"lkc-mv0wp2-preprod-yara-digitalsolution-fafm-farm\",\
+                \"sts.config.endpoint\"                       : \"sts.eu-central-1.amazonaws.com\",\
+                \"storage.class\"                             : \"io.confluent.connect.s3.storage.S3Storage\",\
+                \"enhanced.avro.schema.support\"              : \"true\",\
+                \"locale\"                                    : \"en\",\
+                \"timezone\"                                  : \"UTC\",\
+                \"partition.duration.ms\"                     : \"86400000\",\
+                \"rotate.interval.ms\"                        : \"600000\",\
+                \"partitioner.class\"                         : \"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\",\
+                \"timestamp.extractor\"                       : \"Record\",\
+                \"path.format\"                               : \"'year'=YYYY/'month'=MM/'day'=dd\",\
+                \"filename.offset.zero.pad.width\"            : 8,\
+                \"file.delim\"                                : \"-\"\
+            }"; \
+	sleep infinity		
+

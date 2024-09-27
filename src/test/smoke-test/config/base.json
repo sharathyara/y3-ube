@@ -1,0 +1,4 @@
+{	
+	"REDSHIFT_USER" : "smoke_test_user",
+	"AWS_REGION": "eu-central-1"
+}

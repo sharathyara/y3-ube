@@ -1,0 +1,6 @@
+{
+    "entity_processing_list_folder_name": "polaris_soil_analysis_v2_performed-curated",
+    "glue_job_name": "curator-redshift-job-eu-central-1b",
+    "hudi_record_key": "eventId",
+    "hudi_table_name": "polaris_soil_analysis_v2_performed"
+  } 

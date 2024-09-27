@@ -1,0 +1,336 @@
+[
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "boundaries",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_"         
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "cropRegionId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "date",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "area",
+        "type": "FloatType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "areaUnitId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "requestType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "callbackUrl",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "dMax",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "dMin",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "dTarget",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "growthStage",
+        "type": "IntegerType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "vraType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "protein",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.seed",
+        "fieldName": "featureCollection",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.seed",
+        "fieldName": "valueKey",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "extrapolation",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "success",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "message",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "date",
+        "type": "TimestampType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "cloudCoverage",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "snowCoverage",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "valid",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "cellSize",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "bucketZones",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "id,IntegerType|value,FloatType",
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "zonedZones",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "id,IntegerType|value,FloatType",
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.meta",
+        "fieldName": "indices",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "name,StringType",
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "bucketMean",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "bucketMin",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "bucketMax",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "bucketStd",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "zonedMean",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "zonedMin",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "zonedMax",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.statistics",
+        "fieldName": "zonedStd",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "featureCollection",
+        "type": "StringtType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.configuration",
+        "fieldName": "solution",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    } 
+    
+
+]

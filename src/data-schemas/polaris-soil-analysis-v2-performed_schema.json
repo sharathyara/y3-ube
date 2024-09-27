@@ -1,0 +1,329 @@
+[
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request.location",
+        "fieldName": "countryId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"         
+    },
+    {
+        "parent": "data.request.location",
+        "fieldName": "regionId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"         
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "id",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"         
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "boundaries",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"         
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "area",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"         
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "areaUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"         
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "soilTypeId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"         
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "cropRegionId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_"         
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "yield",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"         
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "yieldUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"         
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "cropResidueManagementId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"         
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "additionalParameters",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "name,StringType|value,StringType|unitId,StringType",
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "cropDescriptionId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_precrop_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "yield",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_precrop_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "yieldUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_precrop_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "cropResidueManagementId",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_precrop_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "cropDescriptionId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_postcrop_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "yield",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_postcrop_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "yieldUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_postcrop_"
+    },
+    {
+        "parent": "data.request.rotation",
+        "fieldName": "cropResidueManagementId",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_postcrop_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "analysis",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "nutrientId,StringType|extractorId,StringType|UnitId,StringType|demandUnitId,StringType|firstDepth,FloatType|secondDepth,FloatType|thirdDepth,FloatType",
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "requestType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "callbackUrl",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "soilAnalysisType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "useDefaultData",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "organicProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "id,StringType|familyId,StringType|name,StringType|lowChloride,BooleanType|density,FloatType|typeId,StringType|dryMatter,FloatType|spreaderLoss,FloatType|n,FloatType|nh4,FloatType|no3,FloatType|urea,FloatType|p,FloatType|k,FloatType|s,FloatType|mg,FloatType|ca,FloatType|b,FloatType|zn,FloatType|mn,FloatType|cu,FloatType|fe,FloatType|mo,FloatType|na,FloatType|se,FloatType|co,FloatType|utilizationN,FloatType|utilizationNH4,FloatType|nUnitId,StringType|nh4UnitId,StringType|no3UnitId,StringType|ureaUnitId,StringType|pUnitId,StringType|kUnitId,StringType|sUnitId,StringType|mgUnitId,StringType|caUnitId,StringType|bUnitId,StringType|znUnitId,StringType|mnUnitId,StringType|cuUnitId,StringType|feUnitId,StringType|moUnitId,StringType|naUnitId,StringType|seUnitId,StringType|coUnitId,StringType|amount,FloatType|amountUnitId,StringType|spreaderMethodId,StringType|applicationDate,StringType",
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "id",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "success",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "begin",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "end",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "message",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "baseData",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "nutrientId,StringType|extractorId,StringType|baseValue,FloatType|baseValueUnitid,StringType|normalRange,StringType|soilClassification,StringType",
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "demandData",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "nutrientClassification,StringType|nutrientId,StringType|elementFormId,StringType|cropDemand,StringType|soilDemand,StringType",
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "organicSupply",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "id,StringType|familyId,StringType|name,StringType|lowChloride,BooleanType|density,FloatType|typeId,StringType|dryMatter,FloatType|spreaderLoss,FloatType|n,FloatType|nh4,FloatType|no3,FloatType|urea,FloatType|p,FloatType|k,FloatType|s,FloatType|mg,FloatType|ca,FloatType|b,FloatType|zn,FloatType|mn,FloatType|cu,FloatType|fe,FloatType|mo,FloatType|na,FloatType|se,FloatType|co,FloatType|utilizationN,FloatType|utilizationNH4,FloatType|nUnitId,StringType|nh4UnitId,StringType|no3UnitId,StringType|ureaUnitId,StringType|pUnitId,StringType|kUnitId,StringType|sUnitId,StringType|mgUnitId,StringType|caUnitId,StringType|bUnitId,StringType|znUnitId,StringType|mnUnitId,StringType|cuUnitId,StringType|feUnitId,StringType|moUnitId,StringType|naUnitId,StringType|seUnitId,StringType|coUnitId,StringType|amount,FloatType|amountUnitId,StringType|spreaderMethodId,StringType|applicationDate,StringType",
+        "prefix": "response_"
+    },   
+    {
+        "parent": "data.configuration",
+        "fieldName": "solution",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    } 
+]

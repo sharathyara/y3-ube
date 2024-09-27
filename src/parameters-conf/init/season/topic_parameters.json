@@ -1,0 +1,8 @@
+{
+  "entity_event_types": "{\"insert\":\"SeasonCreated\",\"update\":\"SeasonUpdated\",\"delete\":\"SeasonDeleted\"}",
+  "entity_processing_list_folder_name": "season",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/season_schema.json",
+  "glue_batch_max_limit": 200,
+  "glue_job_name": "hudi-init-load-job-eu-central-1c",
+  "hudi_table_name": "season"
+}

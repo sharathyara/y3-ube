@@ -1,0 +1,27 @@
+{
+	"name": "ffdp-ube-farm-profile-organisations-s3-sink",
+	"config": {
+		"connector.class": "io.confluent.connect.s3.S3SinkConnector",
+		"topics": "topic_organisations",
+		"format.class": "io.confluent.connect.s3.format.avro.AvroFormat",
+		"value.converter": "io.confluent.connect.avro.AvroConverter",
+		"value.converter.schema.registry.url": "http://schema-registry:8081",
+		"connector.class": "io.confluent.connect.s3.S3SinkConnector",
+		"flush.size": "1",
+		"s3.part.size": "5242880",
+		"s3.bucket.name": "yara-das-ffdp-raw-eucentral1-479055760150-stage",
+		"topics.dir": "organisations/eu-central-1",
+		"s3.region": "eu-central-1",
+		"schema.registry.url": "http://schema-registry:8081",
+		"aws.access.key.id": "*******************",
+		"aws.secret.access.key": "*******************************",
+		"storage.class": "io.confluent.connect.s3.storage.S3Storage",
+		"locale": "en",
+		"timezone": "UTC",
+		"partition.duration.ms": "86400000",
+		"partitioner.class": "io.confluent.connect.storage.partitioner.TimeBasedPartitioner",
+		"path.format": "'year'=YYYY/'month'=MM/'day'=dd",
+		"filename.offset.zero.pad.width": 6,
+		"file.delim": "-"
+	}
+}

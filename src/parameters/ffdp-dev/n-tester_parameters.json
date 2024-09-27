@@ -1,0 +1,16 @@
+{
+  "datalink_metastore_table_name": "DeleteDIUserEntity-dev",
+  "entity_event_types": "{\"insert\":\"NTesterResultCreated\",\"update\":\"NTesterResultUpdated\",\"delete\":\"NTesterResultDeleted\"}",
+  "entity_lock_file_name": "processing.lock",
+  "entity_processing_list_folder_name": "n-tester",
+  "entity_schema_location": "s3://ffdp-2-0-glue-etl-stack-dev-479055760150/schemas/n-tester_schema.json",
+  "entity_source_bucket_name": "ffdp-raw-data-dev-479055760150",
+  "glue_batch_max_limit": 200,
+  "glue_concurrency": 2,
+  "glue_job_name": "hudi-init-load-job-eu-central-1a",
+  "hudi_partition_field": "created_at",
+  "hudi_precombine_field": "dateTimeOccurred",
+  "hudi_record_key": "id",
+  "hudi_table_name": "n_tester",
+  "metastore_table_name": "RawEventEntity-dev"
+}

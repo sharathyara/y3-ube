@@ -1,0 +1,4 @@
+RAW_BUCKET_NAME=ffdp-raw-data-stage-916386002389
+CURATED_BUCKET_NAME=ffdp-curated-data-stage-916386002389
+SCHEMA_BUCKET_NAME=ffdp-2-0-glue-etl-stack-stage-916386002389
+INIT_JOB_METASTORE_TABLE_NAME=RawEventEntity-stage

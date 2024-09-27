@@ -1,0 +1,8 @@
+{
+    "entity_event_types": "",
+    "entity_schema_location": "",
+    "entity_source_bucket_name": "$CURATED_BUCKET_NAME",
+    "glue_batch_max_limit": 1,
+    "metastore_table_name": ""
+  }
+  

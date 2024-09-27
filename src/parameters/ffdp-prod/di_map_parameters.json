@@ -1,0 +1,16 @@
+{
+  "datalink_metastore_table_name": "DeleteDIUserEntity-dev",
+  "entity_event_types": "{\"insert\":\"MapMigrated\",\"update\":\"none\",\"delete\":\"none\"}",
+  "entity_lock_file_name": "processing.lock",
+  "entity_processing_list_folder_name": "di_map",
+  "entity_schema_location": "s3://ffdp-2-0-glue-etl-stack-production-971645767077/schemas/di_map_schema.json",
+  "entity_source_bucket_name": "ffdp-raw-data-production-971645767077",
+  "glue_batch_max_limit": 200,
+  "glue_concurrency": 2,
+  "glue_job_name": "hudi-init-di-map-load-job-eu-central-1b",
+  "hudi_partition_field": "created_at",
+  "hudi_precombine_field": "dateTimeOccurred",
+  "hudi_record_key": "mapFile",
+  "hudi_table_name": "di_map",
+  "metastore_table_name": "RawEventEntity-production"
+}

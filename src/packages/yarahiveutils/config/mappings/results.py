@@ -1,0 +1,20 @@
+results_mapping = {
+    "id": "id",
+    "demoId": "demoId",
+    "resultType": "resultType",
+    "fileName": "fileName",
+    "documentName": "documentName",
+    "documentId": "documentId",
+    "comment": "comment",
+    "status": "status",
+    "displayInResults": "displayInResults",
+    "revokeFromExternalCommunication": "revokeFromExternalCommunication",
+    "addToReport": "addToReport",
+    "approvalNeeded": "approvalNeeded",
+    "approval": "approval",
+    "rejection": "rejection",
+    "updatedBy": "updatedBy",
+    "createdBy": "createdBy",
+    "createdAt": "createdAt.$date",
+    "updatedAt": "updatedAt.$date"
+}

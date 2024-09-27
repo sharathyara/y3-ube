@@ -1,0 +1,8 @@
+{
+  "entity_event_types": "{\"insert\":\"UserCreated\",\"update\":\"UserUpdated\",\"delete\":\"UserDeleted\"}",
+  "entity_processing_list_folder_name": "user",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/user_schema.json",
+  "glue_batch_max_limit": 200,
+  "glue_job_name": "hudi-init-load-job-eu-central-1a",
+  "hudi_table_name": "user"
+}

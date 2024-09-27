@@ -1,0 +1,302 @@
+[{
+        "parent": null,
+        "doc": "",
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    }, {
+        "parent": "data.location",
+        "doc": "Country unique identifier",
+        "fieldName": "countryId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.location",
+        "doc": "Agronomic region unique identifier",
+        "fieldName": "regionId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.field",
+        "doc": "Field unique identifier",
+        "fieldName": "id",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "field_"
+    }, {
+        "parent": "data.field",
+        "doc": "Field boundaries from GeoJSON's geometry property in string representation",
+        "fieldName": "boundaries",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": true,
+        "prefix": "field_"
+    }, {
+        "parent": "data.field",
+        "doc": "Field area (size)",
+        "fieldName": "area",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "field_"
+    }, {
+        "parent": "data.field",
+        "doc": "Field area unit unique identifier",
+        "fieldName": "areaUnitId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "field_"
+    }, {
+        "parent": "data.field",
+        "doc": "Field soil type unique identifier",
+        "fieldName": "soilTypeId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "field_"
+    }, {
+        "parent": "data.cropping",
+        "doc": "Crop region unique identifier",
+        "fieldName": "cropRegionId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.cropping",
+        "doc": "Crop yield",
+        "fieldName": "yield",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.cropping",
+        "doc": "Crop yield unit unique identifier",
+        "fieldName": "yieldUnitId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.cropping",
+        "doc": "Crop residue management unique identifier",
+        "fieldName": "cropResidueManagementId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.cropping",
+        "doc": "Demand amount unit unique identifier",
+        "fieldName": "demandUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.cropping",
+        "doc": "Additional parameter name",
+        "fieldName": "additionalParameters",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "name,StringType|value,StringType|unitId,StringType"
+    }, {
+        "parent": "data.rotation.preCrop",
+        "doc": "Crop description unique identifier",
+        "fieldName": "cropDescriptionId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "preCrop_"
+    }, {
+        "parent": "data.rotation.preCrop",
+        "doc": "Crop yield",
+        "fieldName": "yield",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "preCrop_"
+    }, {
+        "parent": "data.rotation.preCrop",
+        "doc": "Crop yield unique identifier",
+        "fieldName": "yieldUnitId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "preCrop_"
+    }, {
+        "parent": "data.rotation.preCrop",
+        "doc": "Crop residue management unique identifier",
+        "fieldName": "cropResidueManagementId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "preCrop_"
+    }, {
+        "parent": "data.rotation.postCrop",
+        "doc": "Crop description unique identifier",
+        "fieldName": "cropDescriptionId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "postCrop_"
+    }, {
+        "parent": "data.rotation.postCrop",
+        "doc": "Crop yield",
+        "fieldName": "yield",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "postCrop_"
+    }, {
+        "parent": "data.rotation.postCrop",
+        "doc": "Crop yield unique identifier",
+        "fieldName": "yieldUnitId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "postCrop_"
+    }, {
+        "parent": "data.rotation.postCrop",
+        "doc": "Crop residue management unique identifier",
+        "fieldName": "cropResidueManagementId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "postCrop_"
+    }, {
+        "parent": "data",
+        "doc": "Nutrient unique identifier",
+        "fieldName": "analysis",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "nutrientId,StringType|extractorId,StringType|baseValue,DoubleType|baseValueUnitId,StringType|normalRange,StringType|soilClassification,StringType|unitId,StringType|demandUnitId,StringType|firstDepth,DoubleType|secondDepth,DoubleType|thirdDepth,DoubleType"
+    }, {
+        "parent": "data",
+        "doc": "Nutrient classification - VERY_LOW, LOW, MEDIUM, HIGH, VERY_HIGH, or NO_DATA",
+        "fieldName": "demand",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "nutrientClassification,StringType|nutrientId,StringType|elementFormId,StringType|cropDemand,StringType|soilDemand,StringType"
+    }, {
+        "parent": "data",
+        "doc": "Custom user defined list of products to base the recommendation",
+        "fieldName": "customProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "id,StringType|familyId,StringType|name,StringType|lowChloride,BooleanType|density,DoubleType|typeId,StringType|dryMatter,DoubleType|spreaderLoss,DoubleType|n,DoubleType|nh4,DoubleType|no3,DoubleType|urea,DoubleType|p,DoubleType|k,DoubleType|s,DoubleType|mg,DoubleType|ca,DoubleType|b,DoubleType|zn,DoubleType|mn,DoubleType|cu,DoubleType|fe,DoubleType|mo,DoubleType|na,DoubleType|se,DoubleType|co,DoubleType|utilizationN,DoubleType|utilizationNH4,DoubleType|nUnitId,StringType|nh4UnitId,StringType|no3UnitId,StringType|ureaUnitId,StringType|pUnitId,StringType|kUnitId,StringType|sUnitId,StringType|mgUnitId,StringType|caUnitId,StringType|bUnitId,StringType|znUnitId,StringType|mnUnitId,StringType|cuUnitId,StringType|feUnitId,StringType|moUnitId,StringType|naUnitId,StringType|seUnitId,StringType|coUnitId,StringType|growthScaleStageIds,StringType"
+    }, {
+        "parent": "data",
+        "doc": "List of products and amounts already applied per split that should be used to reduce the demand",
+        "fieldName": "appliedProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "id,StringType|familyId,StringType|name,StringType|lowChloride,BooleanType|density,DoubleType|typeId,StringType|dryMatter,DoubleType|spreaderLoss,DoubleType|n,DoubleType|nh4,DoubleType|no3,DoubleType|urea,DoubleType|p,DoubleType|k,DoubleType|s,DoubleType|mg,DoubleType|ca,DoubleType|b,DoubleType|zn,DoubleType|mn,DoubleType|cu,DoubleType|fe,DoubleType|mo,DoubleType|na,DoubleType|se,DoubleType|co,DoubleType|utilizationN,DoubleType|utilizationNH4,DoubleType|nUnitId,StringType|nh4UnitId,StringType|no3UnitId,StringType|ureaUnitId,StringType|pUnitId,StringType|kUnitId,StringType|sUnitId,StringType|mgUnitId,StringType|caUnitId,StringType|bUnitId,StringType|znUnitId,StringType|mnUnitId,StringType|cuUnitId,StringType|feUnitId,StringType|moUnitId,StringType|naUnitId,StringType|seUnitId,StringType|coUnitId,StringType|growthScaleStageId,StringType"
+    }, {
+        "parent": "data.configuration",
+        "doc": "Calculation request type",
+        "fieldName": "requestType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "URL to call after the calculation is finished",
+        "fieldName": "callbackUrl",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "Soil product recommendation calculation type",
+        "fieldName": "productRecommendationType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "Recommend another product for a split if there has been a previously applied product and a remaining demand",
+        "fieldName": "recommendAfterSplitApplication",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "Check if the crop is chloride sensitive and if so use low chloride products only",
+        "fieldName": "checkCropChlorideSensitivity",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "Use the Yara preferred products module",
+        "fieldName": "useYaraPreferredProducts",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "For which capability is the calculation for",
+        "fieldName": "capability",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "Use predefined data for some of the request when it's not provided - to create empty CNPs",
+        "fieldName": "useDefaultData",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": "data.configuration",
+        "doc": "For which parther is the calculation for",
+        "fieldName": "partnerId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": null,
+        "doc": "",
+        "fieldName": "domainCorrelationId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    }, {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }, {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }, {
+        "parent": null,
+        "fieldName": "eventId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }, {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }, {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }
+]

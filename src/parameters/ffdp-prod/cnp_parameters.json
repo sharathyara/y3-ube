@@ -1,0 +1,16 @@
+{
+  "datalink_metastore_table_name": "DeleteDIUserEntity-dev",
+  "entity_event_types": "{\"insert\":\"CNPAssociated,CNPFailed,SoilProductRecommendationSuccess\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_lock_file_name": "processing.lock",
+  "entity_processing_list_folder_name": "cnp",
+  "entity_schema_location": "s3://ffdp-2-0-glue-etl-stack-production-971645767077/schemas/cnp_schema.json",
+  "entity_source_bucket_name": "ffdp-raw-data-production-971645767077",
+  "glue_batch_max_limit": 100,
+  "glue_concurrency": 2,
+  "glue_job_name": "TBD",
+  "hudi_partition_field": "created_at",
+  "hudi_precombine_field": "dateTimeOccurred",
+  "hudi_record_key": "id",
+  "hudi_table_name": "cnp",
+  "metastore_table_name": "RawEventEntity-production"
+}

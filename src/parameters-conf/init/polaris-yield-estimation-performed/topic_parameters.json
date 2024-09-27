@@ -1,0 +1,9 @@
+{
+  "entity_event_types": "{\"insert\":\"YieldEstimationPerformed\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_processing_list_folder_name": "polaris-yield-estimation-performed",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/polaris-yield-estimation-performed_schema.json",
+  "glue_batch_max_limit": 200,
+  "glue_job_name": "hudi-init-load-job-eu-central-1a",
+  "hudi_record_key": "id",
+  "hudi_table_name": "polaris_yield_estimation_performed"
+}

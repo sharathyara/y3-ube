@@ -1,0 +1,3 @@
+DROP SCHEMA IF EXISTS l1_ag_api CASCADE;
+
+DROP SCHEMA IF EXISTS l1_polaris_attributes CASCADE;

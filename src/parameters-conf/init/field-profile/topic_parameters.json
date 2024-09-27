@@ -1,0 +1,9 @@
+{
+  "entity_event_types": "{\"insert\":\"FieldAdded\",\"update\":\"FieldUpdated\",\"delete\":\"FieldDeleted\"}",
+  "entity_processing_list_folder_name": "field-profile",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/field_profile_schema.json",
+  "glue_batch_max_limit": 200,
+  "glue_job_name": "hudi-init-load-job-eu-central-1c",
+  "hudi_record_key": "fieldId",
+  "hudi_table_name": "field"
+}

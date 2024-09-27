@@ -1,0 +1,4 @@
+RAW_BUCKET_NAME=ffdp-raw-data-preprod-703246817203
+CURATED_BUCKET_NAME=ffdp-curated-data-preprod-703246817203
+SCHEMA_BUCKET_NAME=ffdp-2-0-glue-etl-stack-preprod-703246817203
+INIT_JOB_METASTORE_TABLE_NAME=RawEventEntity-preprod

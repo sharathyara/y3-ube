@@ -1,0 +1,1 @@
+alter table varda_gfid.lookup_gfid rename to lookup_gfid_france;

@@ -1,0 +1,278 @@
+[
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "farmId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "fieldId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "location",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "seasonId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "resultDate",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "cropId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "expectedYield",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "expectedYieldUOMId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "cropDescriptionId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "calculationType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "value",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "valuetype",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "createdBy",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "createdAt",
+        "type": "TimestampType",
+        "isNullable": true,
+        "isPIIData": false,
+        "isMergedTo": "created_at"
+    },
+    {
+        "parent": "data",
+        "fieldName": "listOfReadings",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": true,
+        "isMergedTo": "listOfReadingsOrImages"
+    },
+    {
+        "parent": "data",
+        "fieldName": "listOfAnswers",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "isMergedTo": "listOfQuestionAnswers"
+    },
+    {
+        "parent": "data",
+        "fieldName": "notes",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "message",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "messageKey",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "warningMessage",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "warningMessageKey",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "productRecommendation",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "pdfURL",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "nitrogenSufficiencyIndex",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "id",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "null",
+        "fieldName": "data",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventsource",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventtype",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventid",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }, 
+    {
+        "parent": null,
+        "fieldName": "recommendationType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "fieldname",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "fieldarea",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "countryid",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "updatedat",
+        "type": "TimestampType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "deletedat",
+        "type": "TimestampType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "recommendationvalue",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "updatedby",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }
+]

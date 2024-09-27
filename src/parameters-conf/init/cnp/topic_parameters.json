@@ -1,0 +1,7 @@
+{
+  "entity_event_types": "{\"insert\":\"CNPAssociated,CNPFailed,SoilProductRecommendationSuccess\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_processing_list_folder_name": "cnp",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/cnp_schema.json",
+  "glue_job_name": "TBD",
+  "hudi_table_name": "cnp"
+}

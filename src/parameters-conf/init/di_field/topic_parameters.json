@@ -1,0 +1,9 @@
+{
+  "entity_event_types": "{\"insert\":\"FieldMigrated\",\"update\":\"none\",\"delete\":\"none\"}",
+  "entity_processing_list_folder_name": "di_field",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/di_field_schema.json",
+  "glue_batch_max_limit": 200,
+  "glue_job_name": "hudi-init-load-job-eu-central-1b",
+  "hudi_record_key": "sourceFieldId",
+  "hudi_table_name": "di_field"
+}

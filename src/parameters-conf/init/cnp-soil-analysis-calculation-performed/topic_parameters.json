@@ -1,0 +1,7 @@
+{
+  "entity_event_types": "{\"insert\":\"SoilAnalysisCalculationV2Performed\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_processing_list_folder_name": "cnp-soil-analysis-calculation-performed",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/cnp-soil-analysis-calculation-performed_schema.json",
+  "glue_job_name": "TBD",
+  "hudi_table_name": "cnp_soil_analysis_calculation_performed"
+}

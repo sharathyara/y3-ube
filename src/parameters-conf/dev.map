@@ -1,0 +1,4 @@
+RAW_BUCKET_NAME=yara-das-ffdp-raw-eucentral1-479055760150-stage-stitch
+CURATED_BUCKET_NAME=yara-das-ffdp-curated-eucentral1-479055760150-stage-stitch
+SCHEMA_BUCKET_NAME=yara-das-ffdp-raw-eucentral1-479055760150-stage-stitch
+INIT_JOB_METASTORE_TABLE_NAME=RawEventEntity_v6

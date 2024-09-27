@@ -1,0 +1,220 @@
+[
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "clientCode",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "countryId",
+       "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "sourceFarmId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "sourceFieldId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "organizationId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "regionId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "sourceUserId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "point",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "bbox",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "listOfFeatures",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.gfidDetails.entries.entry",
+        "fieldName": "boundaryId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": true
+    },
+    {
+        "parent": "data.gfidDetails.entries.entry",
+        "fieldName": "fieldId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": true
+    },
+    {
+        "parent": "data.gfidDetails.entries.entry",
+        "fieldName": "inputBasedIntersection",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": true
+    },
+    {
+        "parent": "data.gfidDetails.entries.entry",
+        "fieldName": "iouScore",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": true
+    },
+    {
+        "parent": "data.gfidDetails.entries.entry",
+        "fieldName": "outputBasedIntersection",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": true
+    },
+	{
+        "parent": "data",
+        "fieldName": "fieldSize",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "fieldSizeUOM",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "email",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "phone",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "feature",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "geoHash",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "center",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "geometryHash",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data",
+        "fieldName": "ewkt",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+	{
+        "parent": null,
+        "fieldName": "generatedId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "isGenerated": true
+    },
+    {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+	{
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+	{
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }
+]

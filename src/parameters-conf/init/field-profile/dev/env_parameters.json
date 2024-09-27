@@ -1,0 +1,4 @@
+{
+  "glue_job_name": "AvroFromS3ToMarketplaceHudiMultiTopicSubnetC",
+  "hudi_table_name": "field"
+}

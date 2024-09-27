@@ -1,0 +1,6 @@
+{
+  "entity_processing_list_folder_name": "polaris_yield_estimation_performed-curated",
+  "glue_job_name": "curator-redshift-job-eu-central-1a",
+  "hudi_record_key": "id",
+  "hudi_table_name": "polaris_yield_estimation_performed"
+} 

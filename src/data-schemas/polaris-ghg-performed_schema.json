@@ -1,0 +1,491 @@
+[
+
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+
+
+    {
+        "parent": "data.request.location",
+        "fieldName": "countryId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_location_"
+    },
+
+    {
+        "parent": "data.request.location",
+        "fieldName": "regionId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_location_"
+    },
+
+    {
+        "parent": "data.request.field",
+        "fieldName": "fieldSize",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+
+    {
+        "parent": "data.request.field",
+        "fieldName": "fieldSizeUnitId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+
+    {
+        "parent": "data.request.field.soil",
+        "fieldName": "soilTypeId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_soil_"
+    },
+
+    {
+        "parent": "data.request.field.soil",
+        "fieldName": "organicMatter", 
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_soil_"
+    },
+
+
+    {
+        "parent": "data.request.field.soil",
+        "fieldName": "goodDrainage", 
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_soil_"
+    },
+
+    {
+        "parent": "data.request.field.soil",
+        "fieldName": "ph", 
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_soil_"
+    },
+
+    {
+        "parent": "data.request.field",
+        "fieldName": "latitude", 
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+
+    {
+        "parent": "data.request.field",
+        "fieldName": "longitude", 
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "cropRegionId", 
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "yield", 
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "yieldUnitId", 
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+
+
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "farmGateReadyAmount", 
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "farmGateReadyAmountUnitId", 
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "harvestingYear", 
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "coProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "type,StringType|value,DoubleType",
+        "prefix": "request_cropping_"
+    },
+
+    {
+        "parent": "data.request.climate",
+        "fieldName": "name", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_climate_"
+    },
+
+    {
+        "parent": "data.request.climate",
+        "fieldName": "averageTemperatureValue", 
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_climate_"
+
+    },
+
+    {
+        "parent": "data.request.climate",
+        "fieldName": "averageTemperatureValueUnitId", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_climate_"
+    },
+
+    {
+        "parent": "data.request.residues",
+        "fieldName": "amount", 
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_residues_"
+    },
+
+    {
+        "parent": "data.request.residues",
+        "fieldName": "amountUnitId", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_residues_"
+    },
+
+    {
+        "parent": "data.request.residues",
+        "fieldName": "cropResidueManagementId", 
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_residues_"
+    },
+    
+    {
+        "parent": "data.request",
+        "fieldName": "appliedProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "id,StringType|familyId,StringType|name,StringType|lowChloride,BooleanType|density,DoubleType|typeId,StringType|dryMatter,DoubleType|spreaderLoss,DoubleType|n,DoubleType|nh4,DoubleType|no3,DoubleType|urea,DoubleType|p,DoubleType|k,DoubleType|s,DoubleType|mg,DoubleType|ca,DoubleType|b,DoubleType|zn,DoubleType|mn,DoubleType|cu,DoubleType|fe,DoubleType|mo,DoubleType|na,DoubleType|se,DoubleType|co,DoubleType|utilizationN,DoubleType|utilizationNH4,DoubleType|nUnitId,StringType|nH4UnitId,StringType|no3UnitId,StringType|ureaUnitId,StringType|pUnitId,StringType|kUnitId,StringType|sUnitId,StringType|mgUnitId,StringType|caUnitId,StringType|bUnitId,StringType|znUnitId,StringType|mnUnitId,StringType|cuUnitId,StringType|feUnitId,StringType|moUnitId,StringType|naUnitId,StringType|seUnitId,StringType|coUnitId,StringType|amount,DoubleType|amountUnitId,StringType|spreaderMethodId,StringType|productSourceCountryId,StringType|applicationDate,StringType",
+        "prefix": "request_"
+    },
+
+    {
+        "parent": "data.request.wastewaterorganicmatter",
+        "fieldName": "wasteWaterAmount",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_wasteWaterOrganicMatter_"
+    },
+    {
+        "parent": "data.request.wastewaterorganicmatter",
+        "fieldName": "wasteWaterAmountUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_wasteWaterOrganicMatter_"
+    },
+    {
+        "parent": "data.request.wastewaterorganicmatter",
+        "fieldName": "oxygenDemand",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_wasteWaterOrganicMatter_"
+    },
+    {
+        "parent": "data.request.wastewaterorganicmatter",
+        "fieldName": "oxygenDemandUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_wasteWaterOrganicMatter_"
+    },
+    {
+        "parent": "data.request.wastewaterorganicmatter",
+        "fieldName": "oxygenDemandTypeName",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_wasteWaterOrganicMatter_"
+    },
+    {
+        "parent": "data.request.wastewaterorganicmatter",
+        "fieldName": "waterTreatmentTypeName",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_wasteWaterOrganicMatter_"
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "directEnergyUse",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "energyCategoryName,StringType|energySourceName,StringType|energyUsedAmount,DoubleType|energyUsedAmountId,StringType",
+        "prefix": "request_applied_products_"
+    },
+
+    {
+        "parent": "data.request",
+        "fieldName": "machineryUse",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "energySourceName,StringType|machineName,StringType|numberOfBales,IntegerType|numberOfOperations,IntegerType",
+        "prefix": "request_applied_products_"
+    },
+
+    {
+        "parent": "data.request",
+        "fieldName": "transport",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "transportTypeName,StringType|cargoWeight,DoubleType|cargoWeightUnitId,StringType|distance,DoubleType|distanceUnitId,StringType",
+        "prefix": "request_applied_products_"
+    },
+
+    {
+        "parent": "data.request",
+        "fieldName": "irrigationEvents",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "methodName,StringType|waterSourceName,StringType|pumpingDepth,DoubleType|pumpingDepthUnitId,StringType|horizontalDistance,DoubleType|horizontalDistanceUnitId,StringType|powerSourceName,StringType|waterAdded,DoubleType|waterAddedUnitId,StringType|allocation,DoubleType",
+        "prefix": "request_"
+    },
+
+    {
+        "parent": "data.request",
+        "fieldName": "cropProtectionApplications",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "activeIngredientPercentage,DoubleType|applicationRate,DoubleType|applicationRateUnitId,StringType|pesticideCategoryName,StringType|pesticideTypeName,StringType",
+        "prefix": "request_applied_products_"
+    },
+
+    {
+        "parent": "data.request",
+        "fieldName": "treeBiomass",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "treeTypeName,StringType|treeDensityLastYear,DoubleType|treeDensityLastYearUnitId,StringType|treeSizeLastYear,DoubleType|treeSizeLastYearUnitId,StringType|treeSizeCurrentYear,DoubleType|treeSizeCurrentYearUnitId,StringType|treeNetChange,DoubleType|treeNetChangeUnitId,StringType",
+        "prefix": "request_"
+    },
+
+    {
+        "parent": "data.request.landManagement.carbonChanges",
+        "fieldName": "carbonChanges",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "allocationPercent,DoubleType|fromCarbonInputName,StringType|fromLandUseName,StringType|fromTillageName,StringType|toCarbonInputName,StringType|toLandUseName,StringType|toTillageName,StringType|yearOfChange,IntegerType",
+        "prefix": "request_carbonChanges_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "success", 
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_"
+
+    },
+
+    {
+        "parent": "data.response",
+        "fieldName": "message", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+
+    {
+        "parent": "data.response.payload.summary",
+        "fieldName": "emissionsCO2eTotal", 
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_summary_"
+    },
+
+    {
+        "parent": "data.response.payload.summary",
+        "fieldName": "emissionsCO2eTotalUnitId", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_summary_"
+    },
+
+    {
+        "parent": "data.response.payload.summary",
+        "fieldName": "emissionsCO2ePerArea", 
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_summary_"
+    },
+
+    {
+        "parent": "data.response.payload.summary",
+        "fieldName": "emissionsCO2ePerAreaUnitId", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_summary_"
+    },
+
+    {
+        "parent": "data.response.payload.summary",
+        "fieldName": "emissionsCO2ePerProduct", 
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_summary_"
+    },
+
+    {
+        "parent": "data.response.payload.summary",
+        "fieldName": "emissionsCO2ePerProductUnitId", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_summary_"
+    },
+
+    {
+        "parent": "data.response.payload.summary",
+        "fieldName": "soilOrganicCarbon", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_summary_"
+    },
+
+    {
+        "parent": "data.response.payload",
+        "fieldName": "totalEmissions",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "contentOfArray": "name,StringType|co2,DoubleType|n2o,DoubleType|ch4,DoubleType|totalCO2,DoubleType|totalCO2PerArea,DoubleType|totalCO2PerProduct,DoubleType",
+        "prefix": "response_payload_"
+    
+    },
+
+    {
+        "parent": "data.configuration",
+        "fieldName": "solution", 
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "configuration_"
+    },
+
+    {
+        "parent": null,
+        "fieldName": "eventSource", 
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+
+    {
+        "parent": null,
+        "fieldName": "eventType", 
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+
+    {
+        "parent": null,
+        "fieldName": "eventId", 
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+
+    {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    } 
+
+]

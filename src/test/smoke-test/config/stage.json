@@ -1,0 +1,6 @@
+{	
+	"RAW_ZONE_BUCKET_NAME" : "ffdp-raw-data-stage-916386002389",
+	"CONFORMED_ZONE_BUCKET_NAME" : "ffdp-conform-data-stage-916386002389",
+	"CURATED_ZONE_BUCKET_NAME" : "ffdp-curated-data-stage-916386002389",
+	"METASTORE_DYNAMODB" : "RawEventEntity-stage"
+}

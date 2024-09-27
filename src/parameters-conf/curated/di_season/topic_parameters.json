@@ -1,0 +1,6 @@
+{
+  "entity_processing_list_folder_name": "di_season-curated",
+  "glue_job_name": "curator-redshift-job-eu-central-1a",
+  "hudi_record_key": "sourceSeasonId",
+  "hudi_table_name": "di_season"
+}

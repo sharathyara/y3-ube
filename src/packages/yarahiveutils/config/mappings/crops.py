@@ -1,0 +1,21 @@
+crops_mapping = {
+    "Id": "Id",
+    "name": "name",
+    "code": "code",
+    "enabled": "enabled",
+    "subcrop": "subcrop",
+    "country": "country",
+    "regions": "regions",
+    "cultivationDetails": "cultivationDetails",
+    "growthStageScale": "growthStageScale",
+    "growthStages": "growthStages",
+    "applicationMethods": "applicationMethods",
+    "measurements": "measurements",
+    "yieldUnit": "yieldUnit",
+    "cropPriceCalculatedPerUnit": "cropPriceCalculatedPerUnit",
+    "costAndRevenueCalculatedPerUnit": "costAndRevenueCalculatedPerUnit",
+    "insertedViaUpdateDemoCropsUsingCropsOfDemoCountryMigration": "insertedViaUpdateDemoCropsUsingCropsOfDemoCountryMigration",
+    "defaultCommercializationUnitsPopulatedViaMigration": "defaultCommercializationUnitsPopulatedViaMigration",
+    "createdAt": "createdAt.$date",
+    "updatedAt": "updatedAt.$date"
+}

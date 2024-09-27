@@ -1,0 +1,19 @@
+{
+    "connector.class": "S3Source",
+    "name": "s3_source_ffdp-stage-yara-ds-di-user-deletion-response",
+    "kafka.auth.mode": "KAFKA_API_KEY",
+    "kafka.api.key": "******",
+    "kafka.api.secret": "******",
+    "aws.access.key.id": "******",
+    "aws.secret.access.key": "******",
+    "kafka.region": "eu-central-1",
+    "tasks.max": "1",
+    "topics": "stage-yara-digitalsolution-di-deletion-request-processed",
+    "topic.regex.list": "stage-yara-digitalsolution-di-deletion-request-processed:.*\\.json",
+    "s3.bucket.name": "ffdp-outbound-stage-916386002389",
+    "s3.region":"eu-central-1",
+    "topics.dir": " ",
+    "output.data.format": "JSON",
+    "cloud.provider": "aws",
+    "input.data.format": "JSON"
+}

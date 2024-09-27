@@ -1,0 +1,301 @@
+[
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request.location",
+        "fieldName": "countryId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_location_"
+    },
+    {
+        "parent": "data.request.location",
+        "fieldName": "regionId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_location_"
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "latitude",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "longitude",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "cropRegionId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "yield",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "yieldUnitId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.cropping",
+        "fieldName": "nExport",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.climate",
+        "fieldName": "nDeposition",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_climate_"
+    },
+    {
+        "parent": "data.request.appliedProducts",
+        "fieldName": "appliedProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_",
+        "contentOfArray": "id,StringType|familyId,StringType|name,StringType|typeId,StringType|amount,DoubleType|amountUnitId,StringType|n,DoubleType|nUnitId,StringType|density,DoubleType"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "requestType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_configuration_"
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "callbackUrl",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_configuration_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "success",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "message",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload.nInput",
+        "fieldName": "value",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nInput_"
+    },
+    {
+        "parent": "data.response.payload.nInput",
+        "fieldName": "unitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nInput_"
+    },
+    {
+        "parent": "data.response.payload.nOutput",
+        "fieldName": "value",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nOutput_"
+    },
+    {
+        "parent": "data.response.payload.nOutput",
+        "fieldName": "unitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nOutput_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "value",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nSurplus_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "unitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nSurplus_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "value",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nue_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "unitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nue_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "value",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDeposition_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "unitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDeposition_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "dryDepositionOxidized",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDepositionInfo_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "wetDepositionOxidized",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDepositionInfo_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "dryDepositionReduced",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDepositionInfo_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "wetDepositionReduced",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDepositionInfo_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "defaultDeposition",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDepositionInfo_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "requestDeposition",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_nDepositionInfo_"
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "type",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.configuration",
+        "fieldName": "solution",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "configuration_"
+    },
+    {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    } 
+]

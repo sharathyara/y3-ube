@@ -1,0 +1,9 @@
+{
+  "entity_event_types": "{\"insert\":\"FarmMigrated\",\"update\":\"none\",\"delete\":\"FarmDeleted\"}",
+  "entity_processing_list_folder_name": "di_farm",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/di_farm_schema.json",
+  "glue_batch_max_limit": 200,
+  "glue_job_name": "hudi-init-load-job-eu-central-1a",
+  "hudi_record_key": "sourceFarmId",
+  "hudi_table_name": "di_farm"
+}

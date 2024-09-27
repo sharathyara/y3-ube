@@ -1,0 +1,8 @@
+{	
+	"MAPS_DATA_BUCKET_NAME" : "ffdp-maps-data-preprod-703246817203",
+	"RAW_ZONE_BUCKET_NAME" : "ffdp-raw-data-preprod-703246817203",
+	"CONFORMED_ZONE_BUCKET_NAME" : "ffdp-conform-data-preprod-703246817203",
+	"CURATED_ZONE_BUCKET_NAME" : "ffdp-curated-data-preprod-703246817203",
+	"METASTORE_DYNAMODB" : "RawEventEntity-preprod",
+	"MWAA_ENVIRONMENT" : "ffdp-mwaa-preprod"
+}

@@ -1,0 +1,16 @@
+{
+  "datalink_metastore_table_name": "DeleteDIUserEntity-dev",
+  "entity_event_types": "{\"insert\":\"SoilAnalysisCalculationV2Performed\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_lock_file_name": "processing.lock",
+  "entity_processing_list_folder_name": "polaris-soil-analysis-v2-performed",
+  "entity_schema_location": "s3://ffdp-2-0-glue-etl-stack-stage-916386002389/schemas/polaris-soil-analysis-v2-performed_schema.json",
+  "entity_source_bucket_name": "ffdp-raw-data-stage-916386002389",
+  "glue_batch_max_limit": 200,
+  "glue_concurrency": 2,
+  "glue_job_name": "hudi-init-load-job-eu-central-1b",
+  "hudi_partition_field": "created_at",
+  "hudi_precombine_field": "dateTimeOccurred",
+  "hudi_record_key": "eventId",
+  "hudi_table_name": "polaris_soil_analysis_v2_performed",
+  "metastore_table_name": "RawEventEntity-stage"
+}

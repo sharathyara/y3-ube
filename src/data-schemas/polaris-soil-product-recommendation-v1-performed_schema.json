@@ -1,0 +1,1571 @@
+[
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request.Location",
+        "doc": "Country unique identifier",
+        "fieldName": "CountryId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_location_"
+    },
+    {
+        "parent": "data.request.Location",
+        "doc": "Agronomic region unique identifier",
+        "fieldName": "RegionId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_location_"
+    },
+    {
+        "parent": "data.request.Field",
+        "doc": "field unique identifier",
+        "fieldName": "Id",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.Field",
+        "doc": "Field boundaries from GeoJSON's 'geometry' property in string representation",
+        "fieldName": "Boundaries",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": true,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.Field",
+        "doc": "Field size number",
+        "fieldName": "Size",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.Field",
+        "doc": "Field size unit which is defined with polaris unit system identifier",
+        "fieldName": "SizeUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.Field",
+        "doc": "Soil Type Identifier",
+        "fieldName": "SoilTypeId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Crop Identifier",
+        "fieldName": "CropId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Crop yield",
+        "fieldName": "Yield",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Expected Yield unit",
+        "fieldName": "YieldUnit",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Farm identifier",
+        "fieldName": "FarmId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Field identifier",
+        "fieldName": "FieldId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Field Croppable Area Value",
+        "fieldName": "CroppableArea",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Croppable Area unit",
+        "fieldName": "CroppableAreaUnit",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Crop additional parameters",
+        "fieldName": "AdditionalParameters",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_cropping_",
+        "contentOfArray": "Name,StringType|Value,StringType|UnitId,StringType"
+    },
+    {
+        "parent": "data.request.Cropping",
+        "doc": "Crop Residue Management Identifier",
+        "fieldName": "CropResidueManagementId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_cropping_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Previous Crop Identifier",
+        "fieldName": "PreCropId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Previous Crop Yield",
+        "fieldName": "PreCropYield",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Previous Crop Yield Units",
+        "fieldName": "PreCropYieldUnit",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Crop Residue Management Identifier For Previous Crop",
+        "fieldName": "PreCropResidueManagementId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Next Crop Identifier",
+        "fieldName": "PostCropId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Next Crop Yield",
+        "fieldName": "PostCropYield",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Next Crop Yield Units",
+        "fieldName": "PostCropYieldUnit",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Rotation",
+        "doc": "Crop Residue Management Identifier For Next Crop",
+        "fieldName": "PostCropResidueManagementId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_rotation_"
+    },
+    {
+        "parent": "data.request.Insight",
+        "doc": "Language to use for insight information, default english",
+        "fieldName": "Locale",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_insight_"
+    },
+    {
+        "parent": "data.request.Insight",
+        "doc": "Flag to determine if insights be included in the calculation response",
+        "fieldName": "IncludeInsights",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_insight_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Nitrogen Analysis Class (Default empty)",
+        "fieldName": "N",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Phosphorus Analysis Class (Default empty)",
+        "fieldName": "P",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Potassium Analysis Class (Default empty)",
+        "fieldName": "K",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Sulphur Analysis Class (Default empty)",
+        "fieldName": "S",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Magnesium Analysis Class (Default empty)",
+        "fieldName": "Mg",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Calcium Analysis Class (Default empty)",
+        "fieldName": "Ca",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Boron Analysis Class (Default empty)",
+        "fieldName": "B",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Molybdenum Analysis Class (Default empty)",
+        "fieldName": "Mo",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Zinc Analysis Class (Default empty)",
+        "fieldName": "Zn",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Copper Analysis Class (Default empty)",
+        "fieldName": "Cu",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Iron Analysis Class (Default empty)",
+        "fieldName": "Fe",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Manganese Analysis Class (Default empty)",
+        "fieldName": "Mn",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Sodium Analysis Class (Default empty)",
+        "fieldName": "Na",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Selenium Analysis Class (Default empty)",
+        "fieldName": "Se",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Classes",
+        "doc": "Cobalt Analysis Class (Default empty)",
+        "fieldName": "Co",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_classes_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Mineral N (Default -1 for no value)",
+        "fieldName": "NMin",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Mineral S (Default -1 for no value)"        ,
+        "fieldName": "SMin",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Clay Content (Default -1 for no value)"        ,
+        "fieldName": "Clay",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Sand (Default -1 for no value)"        ,
+        "fieldName": "Sand",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Silt (Default -1 for no value)"        ,
+        "fieldName": "Silt",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Slit (Default -1 for no value)"        ,
+        "fieldName": "Slit",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Sum Of Bases(Default -1 for no value)"        ,
+        "fieldName": "SumOfBases",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Electrical Conductivity (Default -1 for no value)",
+        "fieldName": "EC",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Organic Matter Content (Default -1 for no value)",
+        "fieldName": "OrgM",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Organic Carbon Content (Default -1 for no value)",
+        "fieldName": "OrgC",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil CEC (Default -1 for no value)",
+        "fieldName": "CEC",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil pH (Default -1 for no value)",
+        "fieldName": "pH",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Buffer pH (Default -1 for no value)",
+        "fieldName": "BpH",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Base Saturation (Default -1 for no value)",
+        "fieldName": "BsSat",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Potassium Saturation (Default -1 for no value)",
+        "fieldName": "KSat",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Magnesium Saturation (Default -1 for no value)",
+        "fieldName": "MgSat",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Calcium Saturation (Default -1 for no value)",
+        "fieldName": "CaSat",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Aluminium Saturation (Default -1 for no value)",
+        "fieldName": "AlSat",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Nitrate content (Default -1 for no value)",
+        "fieldName": "NO3",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Ammonium content (Default -1 for no value)",
+        "fieldName": "NH4",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Nitrogen content (Default -1 for no value)",
+        "fieldName": "N",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Phosphorus content (Default -1 for no value)",
+        "fieldName": "P",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Potassium content (Default -1 for no value)",
+        "fieldName": "K",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Sulphur content (Default -1 for no value)",
+        "fieldName": "S",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Magnesium content (Default -1 for no value)",
+        "fieldName": "Mg",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Calcium content (Default -1 for no value)",
+        "fieldName": "Ca",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Zinc content (Default -1 for no value)",
+        "fieldName": "Zn",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Boron content (Default -1 for no value)",
+        "fieldName": "B",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Molybdenum content (Default -1 for no value)",
+        "fieldName": "Mo",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Copper content (Default -1 for no value)",
+        "fieldName": "Cu",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Iron content (Default -1 for no value)",
+        "fieldName": "Fe",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Manganese content (Default -1 for no value)",
+        "fieldName": "Mn",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Aluminium content (Default -1 for no value)",
+        "fieldName": "Al",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Sodium content (Default -1 for no value)",
+        "fieldName": "Na",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Selenium content (Default -1 for no value)",
+        "fieldName": "Se",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil Cobalt content (Default -1 for no value)",
+        "fieldName": "Co",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil SMP (Default -1 for no value)",
+        "fieldName": "SMP",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Analysis.Values",
+        "doc": "Soil P Remaining Analysis(Default -1 for no value)",
+        "fieldName": "PRem",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_analysis_values_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Nitrogen Crop Demand",
+        "fieldName": "N",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Phosphorus Crop Demand",
+        "fieldName": "P",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Potassium Crop Demand",
+        "fieldName": "K",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Sulphur Crop Demand",
+        "fieldName": "S",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Magnesium Crop Demand",
+        "fieldName": "Mg",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Calcium Crop Demand",
+        "fieldName": "Ca",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Boron Crop Demand",
+        "fieldName": "B",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Molybdenum Crop Demand",
+        "fieldName": "Mo",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Zinc Crop Demand",
+        "fieldName": "Zn",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Copper Crop Demand",
+        "fieldName": "Cu",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Iron Crop Demand",
+        "fieldName": "Fe",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Manganese Crop Demand",
+        "fieldName": "Mn",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Sodium Crop Demand",
+        "fieldName": "Na",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "selenium Crop Demand",
+        "fieldName": "Se",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Crop",
+        "doc": "Cobalt Crop Demand",
+        "fieldName": "Co",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_crop_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Nitrogen Crop Demand",
+        "fieldName": "N",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Phosphorus Crop Demand",
+        "fieldName": "P",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Potassium Crop Demand",
+        "fieldName": "K",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Sulphur Crop Demand",
+        "fieldName": "S",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Magnesium Crop Demand",
+        "fieldName": "Mg",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Calcium Crop Demand",
+        "fieldName": "Ca",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Boron Crop Demand",
+        "fieldName": "B",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Molybdenum Crop Demand",
+        "fieldName": "Mo",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Zinc Crop Demand",
+        "fieldName": "Zn",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Copper Crop Demand",
+        "fieldName": "Cu",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Iron Crop Demand",
+        "fieldName": "Fe",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Manganese Crop Demand",
+        "fieldName": "Mn",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Sodium Crop Demand",
+        "fieldName": "Na",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "selenium Crop Demand",
+        "fieldName": "Se",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Soil",
+        "doc": "Cobalt Crop Demand",
+        "fieldName": "Co",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_soil_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Nitrogen Crop Demand Unit",
+        "fieldName": "N",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Phosphorus Crop Demand Unit",
+        "fieldName": "P",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Potassium Crop Demand Unit",
+        "fieldName": "K",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Sulphur Crop Demand Unit",
+        "fieldName": "S",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Magnesium Crop Demand Unit",
+        "fieldName": "Mg",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Calcium Crop Demand Unit",
+        "fieldName": "Ca",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Boron Crop Demand Unit",
+        "fieldName": "B",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Molybdenum Crop Demand Unit",
+        "fieldName": "Mo",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Zinc Crop Demand Unit",
+        "fieldName": "Zn",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Copper Crop Demand Unit",
+        "fieldName": "Cu",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Iron Crop Demand Unit",
+        "fieldName": "Fe",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Manganese Crop Demand Unit",
+        "fieldName": "Mn",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Sodium Crop Demand Unit",
+        "fieldName": "Na",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Selenium Crop Demand Unit",
+        "fieldName": "Se",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Cobalt Crop Demand Unit",
+        "fieldName": "Co",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Nitrogen Crop Demand Unit Id",
+        "fieldName": "NUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Phosphorus Crop Demand Unit Id",
+        "fieldName": "PUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Potassium Crop Demand Unit Id",
+        "fieldName": "KUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Sulphur Crop Demand Unit Id",
+        "fieldName": "SUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Magnesium Crop Demand Unit Id",
+        "fieldName": "MgUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Calcium Crop Demand Unit Id",
+        "fieldName": "CaUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Boron Crop Demand Unit Id",
+        "fieldName": "BUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Molybdenum Crop Demand Unit Id",
+        "fieldName": "MoUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Zinc Crop Demand Unit Id",
+        "fieldName": "ZnUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Copper Crop Demand Unit Id",
+        "fieldName": "CuUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Iron Crop Demand Unit Id",
+        "fieldName": "FeUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Manganese Crop Demand Unit Id",
+        "fieldName": "MnUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Sodium Crop Demand Unit Id",
+        "fieldName": "NaUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Selenium Crop Demand Unit Id",
+        "fieldName": "SeUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Cobalt Crop Demand Unit Id",
+        "fieldName": "CoUnitId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request.Demand.Unit",
+        "doc": "Demand amount Unit (e.g. Kg/ha)",
+        "fieldName": "Amount",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_demand_unit_"
+    },
+    {
+        "parent": "data.request",
+        "doc": "Custom user defined list of products to base the recommendation on",
+        "fieldName": "UserDefinedProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_",
+        "contentOfArray": "Id,StringType|SpecifiedOrdinals,StringType|Family,StringType|FamilyId,StringType|Name,StringType|LowChloride,BooleanType|Density,DoubleType|ProductTypeId,StringType|ProductType,StringType|N,DoubleType|NH4,DoubleType|NO3,DoubleType|Urea,DoubleType|P,DoubleType|K,DoubleType|S,DoubleType|Mg,DoubleType|Ca,DoubleType|B,DoubleType|Zn,DoubleType|Mn,DoubleType|Cu,DoubleType|Fe,DoubleType|Mo,DoubleType|Na,DoubleType|Se,DoubleType|Co,DoubleType|UtilizationN,DoubleType|UtilizationNH4,DoubleType|NUnit,StringType|PUnit,StringType|KUnit,StringType|SUnit,StringType|MgUnit,StringType|CaUnit,StringType|BUnit,StringType|MoUnit,StringType|ZnUnit,StringType|CuUnit,StringType|FeUnit,StringType|MnUnit,StringType|NaUnit,StringType|SeUnit,StringType|CoUnit,StringType|NUnitId,StringType|PUnitId,StringType|KUnitId,StringType|SUnitId,StringType|MgUnitId,StringType|CaUnitId,StringType|BUnitId,StringType|MoUnitId,StringType|ZnUnitId,StringType|CuUnitId,StringType|FeUnitId,StringType|MnUnitId,StringType|NaUnitId,StringType|SeUnitId,StringType|CoUnitId,StringType"
+    },
+    {
+        "parent": "data.request",
+        "doc": "Previously Applied Product for this Crop that should be used to reduce the demand",
+        "fieldName": "UserAppliedProducts",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_",
+        "contentOfArray": "Id,StringType|Name,StringType|Amount,DoubleType|AmountUnit,StringType|Ordinal,DoubleType|Density,DoubleType|ProductType,StringType|N,DoubleType|NH4,DoubleType|NO3,DoubleType|Urea,DoubleType|P,DoubleType|K,DoubleType|S,DoubleType|Mg,DoubleType|Ca,DoubleType|B,DoubleType|Zn,DoubleType|Mn,DoubleType|Cu,DoubleType|Fe,DoubleType|Mo,DoubleType|Na,DoubleType|Se,DoubleType|Co,DoubleType|UtilizationN,DoubleType|UtilizationNH4,DoubleType|DryMatter,DoubleType|SpreaderLoss,DoubleType|NUnit,StringType|PUnit,StringType|KUnit,StringType|SUnit,StringType|MgUnit,StringType|CaUnit,StringType|BUnit,StringType|MoUnit,StringType|ZnUnit,StringType|CuUnit,StringType|FeUnit,StringType|MnUnit,StringType|NaUnit,StringType|SeUnit,StringType|CoUnit,StringType"
+    },
+    {
+        "parent": "data.request.Config",
+        "doc": "Recommend another product for a split if there has been a previously applied product and a remaining demand",
+        "fieldName": "RecommendAfterSplitApplication",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_config_"
+    },
+    {
+        "parent": "data.request.Config",
+        "doc": "Check if the crop is chloride sensitive and if so use low chloride products only",
+        "fieldName": "CheckCropChlorideSensitivity",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_config_"
+    },
+    {
+        "parent": "data.request.Config",
+        "doc": "Use the Yara preferred products module",
+        "fieldName": "UseYaraPreferredProducts",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_config_"
+    },
+    {
+        "parent": "data.request.Config",
+        "doc": "For which capability is the calculation for",
+        "fieldName": "Capability",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_config_"
+    },
+    {
+        "parent": "data.request.RequestDetails",
+        "doc": "Unique Request Identifier",
+        "fieldName": "Id",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_requestdetails_"
+    },
+    {
+        "parent": "data.request.RequestDetails",
+        "doc": "Date and time of the Request",
+        "fieldName": "Date",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_requestdetails_"
+    },
+    {
+        "parent": "data.request.RequestDetails",
+        "doc": "Version of the Ruleset to calculate (Unrecognized versions default to first version of the ruleset)",
+        "fieldName": "RulesetVersion",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_requestdetails_"
+    },
+    {
+        "parent": "data.response",
+        "doc": "Outcome of the calculation",
+        "fieldName": "Success",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "doc": "Start time of the calculation",
+        "fieldName": "Begin",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "doc": "End time of the calculation",
+        "fieldName": "End",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.Payload.Yield",
+        "doc": "Yield Conversion Data",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_yield_",
+        "contentOfArray": "AnalysisUnit,StringType|AnalysisValue,DoubleType|BaseUnit,StringType|BaseValue,DoubleType"
+    },
+    {
+        "parent": "data.response.Payload.PreCropYield",
+        "doc": "Calculated Previous Crop Yield Base Data",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_precropyield_",
+        "contentOfArray": "AnalysisUnit,StringType|AnalysisValue,DoubleType|BaseUnit,StringType|BaseValue,DoubleType"
+    },
+    {
+        "parent": "data.response.Payload.PostCropYield",
+        "doc": "Calculated Next Crop Yield Base Data",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_postcropyield_",
+        "contentOfArray": "AnalysisUnit,StringType|AnalysisValue,DoubleType|BaseUnit,StringType|BaseValue,DoubleType"
+    },
+    {
+        "parent": "data.response.Payload.DemandUnitData",
+        "doc": "Demand units conversion information",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_demandunitdata_",
+        "contentOfArray": "SolidUnit,StringType|IsImperial,BooleanType|LiquidUnit,StringType|Multiplier,DoubleType"
+    },
+    {
+        "parent": "data.response.Payload.SplitData",
+        "doc": "Per Split Demand and Product Type Results",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_splitdata_",
+        "contentOfArray": "Id,StringType|N,DoubleType|P,DoubleType|K,DoubleType|S,DoubleType|Mg,DoubleType|Ca,DoubleType|B,DoubleType|Zn,DoubleType|Mn,DoubleType|Cu,DoubleType|Fe,DoubleType|Mo,DoubleType|Na,DoubleType|Se,DoubleType|Co,DoubleType|ApplicationMethod,StringType|PreferredUnit,StringType|GrowthStage,StringType|GrowthStageId,StringType|Month,StringType|ApplicationTags,StringType|ShouldComboExistInPreference,BooleanType|Ordinal,DoubleType|ProductType,StringType|ProductTypeId,StringType|TotalRecommendedProducts,DoubleType|CarryOverN,BooleanType|CarryOverP,BooleanType|CarryOverK,BooleanType|CarryOverS,BooleanType|CarryOverMg,BooleanType|CarryOverCa,BooleanType|CarryOverB,BooleanType|CarryOverZn,BooleanType|CarryOverMn,BooleanType|CarryOverCu,BooleanType|CarryOverFe,BooleanType|CarryOverMo,BooleanType|CarryOverNa,BooleanType|CarryOverSe,BooleanType|CarryOverCo,BooleanType"
+    },
+    {
+        "parent": "data.response.Payload.RecommendationData",
+        "doc": "Per Split Recommendation Product Results",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_Recommendationdata_",
+        "contentOfArray": "Ordinal,DoubleType|ProductType,StringType|ProductTypeId,StringType|Nutrient,StringType|Fertilizer,StringType"
+    },
+    {
+        "parent": "data.response.Payload.OrganicSupply",
+        "doc": "Per Split Demand and Product Type Results",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_organicsupply_",
+        "contentOfArray": "N,DoubleType|NH4,DoubleType|NO3,DoubleType|Urea,DoubleType|P,DoubleType|K,DoubleType|S,DoubleType|Mg,DoubleType|Ca,DoubleType|B,DoubleType|Zn,DoubleType|Mn,DoubleType|Cu,DoubleType|Fe,DoubleType|Mo,DoubleType|Na,DoubleType|Se,DoubleType|Co,DoubleType|NUnit,StringType|PUnit,StringType|KUnit,StringType|SUnit,StringType|MgUnit,StringType|CaUnit,StringType|BUnit,StringType|ZnUnit,StringType|MnUnit,StringType|CuUnit,StringType|FeUnit,StringType|MoUnit,StringType|NaUnit,StringType|SeUnit,StringType|CoUnit,StringType|NUnitId,StringType|PUnitId,StringType|KUnitId,StringType|SUnitId,StringType|MgUnitId,StringType|CaUnitId,StringType|BUnitId,StringType|ZnUnitId,StringType|MnUnitId,StringType|CuUnitId,StringType|FeUnitId,StringType|MoUnitId,StringType|NaUnitId,StringType|SeUnitId,StringType|CoUnitId,StringType|AmountUnit,StringType"
+    },
+    {
+        "parent": "data.response.Payload.CropDemand",
+        "doc": "Nutrition needed for the crop (after supplied organics)",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_cropdemand_",
+        "contentOfArray": "N,DoubleType|P,DoubleType|K,DoubleType|S,DoubleType|Mg,DoubleType|Ca,DoubleType|B,DoubleType|Zn,DoubleType|Mn,DoubleType|Cu,DoubleType|Fe,DoubleType|Mo,DoubleType|Na,DoubleType|Se,DoubleType|Co,DoubleType|NUnit,StringType|PUnit,StringType|KUnit,StringType|SUnit,StringType|MgUnit,StringType|CaUnit,StringType|BUnit,StringType|ZnUnit,StringType|MnUnit,StringType|CuUnit,StringType|FeUnit,StringType|MoUnit,StringType|NaUnit,StringType|SeUnit,StringType|CoUnit,StringType|NUnitId,StringType|PUnitId,StringType|KUnitId,StringType|SUnitId,StringType|MgUnitId,StringType|CaUnitId,StringType|BUnitId,StringType|ZnUnitId,StringType|MnUnitId,StringType|CuUnitId,StringType|FeUnitId,StringType|MoUnitId,StringType|NaUnitId,StringType|SeUnitId,StringType|CoUnitId,StringType|AmountUnit,StringType"
+    },
+    {
+        "parent": "data.response.Payload.SoilImprovementDemand",
+        "doc": "Nutrition needed for Soil Improvement",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_soilimprovementdemand_",
+        "contentOfArray": "N,DoubleType|P,DoubleType|K,DoubleType|S,DoubleType|Mg,DoubleType|Ca,DoubleType|B,DoubleType|Zn,DoubleType|Mn,DoubleType|Cu,DoubleType|Fe,DoubleType|Mo,DoubleType|Na,DoubleType|Se,DoubleType|Co,DoubleType|NUnit,StringType|PUnit,StringType|KUnit,StringType|SUnit,StringType|MgUnit,StringType|CaUnit,StringType|BUnit,StringType|ZnUnit,StringType|MnUnit,StringType|CuUnit,StringType|FeUnit,StringType|MoUnit,StringType|NaUnit,StringType|SeUnit,StringType|CoUnit,StringType|NUnitId,StringType|PUnitId,StringType|KUnitId,StringType|SUnitId,StringType|MgUnitId,StringType|CaUnitId,StringType|BUnitId,StringType|ZnUnitId,StringType|MnUnitId,StringType|CuUnitId,StringType|FeUnitId,StringType|MoUnitId,StringType|NaUnitId,StringType|SeUnitId,StringType|CoUnitId,StringType|AmountUnit,StringType"
+    },
+    {
+        "parent": "data.response.Payload.FertilizerNeed",
+        "doc": "Nutrition needed from inorganics including crop and soil improvement demands",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_fertilizerneed_",
+        "contentOfArray": "N,DoubleType|P,DoubleType|K,DoubleType|S,DoubleType|Mg,DoubleType|Ca,DoubleType|B,DoubleType|Zn,DoubleType|Mn,DoubleType|Cu,DoubleType|Fe,DoubleType|Mo,DoubleType|Na,DoubleType|Se,DoubleType|Co,DoubleType|NUnit,StringType|PUnit,StringType|KUnit,StringType|SUnit,StringType|MgUnit,StringType|CaUnit,StringType|BUnit,StringType|ZnUnit,StringType|MnUnit,StringType|CuUnit,StringType|FeUnit,StringType|MoUnit,StringType|NaUnit,StringType|SeUnit,StringType|CoUnit,StringType|NUnitId,StringType|PUnitId,StringType|KUnitId,StringType|SUnitId,StringType|MgUnitId,StringType|CaUnitId,StringType|BUnitId,StringType|ZnUnitId,StringType|MnUnitId,StringType|CuUnitId,StringType|FeUnitId,StringType|MoUnitId,StringType|NaUnitId,StringType|SeUnitId,StringType|CoUnitId,StringType|AmountUnit,StringType"
+    },
+    {
+        "parent": "data.response.Payload.Config",
+        "doc": "Configuration used for the calculation",
+        "fieldName": "Items",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_config_",
+        "contentOfArray": "RecommendAfterSplitApplication,BooleanType|CheckCropChlorideSensitivity,BooleanType|UseYaraPreferredProducts,BooleanType|Capability,StringType"
+    },
+    {
+        "parent": "data.response.RequestDetails",
+        "doc": "Unique Request Identifier",
+        "fieldName": "Id",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_requestdetails_"
+    },
+    {
+        "parent": "data.response.RequestDetails",
+        "doc": "Date and time of the Request",
+        "fieldName": "Date",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_requestdetails_"
+    },
+    {
+        "parent": "data.response.RequestDetails",
+        "doc": "Version of the Ruleset to calculate",
+        "fieldName": "RulesetVersion",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_requestdetails_"
+    },
+    {
+        "parent": "data.response.ErrorData",
+        "doc": "List of Errors",
+        "fieldName": "Errors",
+        "type": "ArrayType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_errordata_",
+        "contentOfArray": "Message,StringType|ErrorType,StringType"
+    },
+    {
+        "parent": "data.configuration",
+        "doc": "Partner who invoked the calculation",
+        "fieldName": "solution",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_errordata_"
+    },
+    {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }
+]

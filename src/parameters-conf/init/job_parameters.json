@@ -1,0 +1,6 @@
+{
+    "entity_source_bucket_name": "$RAW_BUCKET_NAME",
+    "metastore_table_name": "$INIT_JOB_METASTORE_TABLE_NAME",
+    "datalink_metastore_table_name": "$INIT_JOB_DATALINK_METASTORE_TABLE_NAME",
+    "glue_concurrency": 2
+}

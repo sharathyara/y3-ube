@@ -1,0 +1,200 @@
+[
+    {
+        "parent": null,
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "boundaries",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "cropRegionId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "date",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "area",
+        "type": "FloatType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request.field",
+        "fieldName": "areaUnitId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "requestType",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request.configuration",
+        "fieldName": "callbackUrl",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request",
+        "fieldName": "extrapolation",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "id",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "success",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "begin",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "end",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response",
+        "fieldName": "message",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "min",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "max",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "mean",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "std",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "cloudCoverage",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "snowCoverage",
+        "type": "FloatType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "valid",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.response.payload",
+        "fieldName": "date",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "image_"
+    },
+    {
+        "parent": "data.configuration",
+        "fieldName": "solution",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventId",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    } 
+]

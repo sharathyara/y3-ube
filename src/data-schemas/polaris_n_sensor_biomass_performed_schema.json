@@ -1,0 +1,218 @@
+[
+    {
+        "parent": null,
+        "doc": "",
+        "fieldName": "dateTimeOccurred",
+        "type": "TimestampType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "doc": "N sensor Biomass Calculation unique identifier",
+        "fieldName": "eventId",
+        "type": "UUIDType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": "data.request",
+        "doc": "Request field boundary",
+        "fieldName": "boundaries",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": true,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request.field",
+        "doc": "request field area",
+        "fieldName": "area",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request.field",
+        "doc": "request field area unit ID",
+        "fieldName": "areaUnitId",
+        "type": "UUIDType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "request_field_"
+    },
+    {
+        "parent": "data.request",
+        "doc": "request configuration",
+        "fieldName": "configuration",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+
+    },
+    {
+        "parent": "data.request",
+        "doc": "",
+        "fieldName": "cropRegionId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "doc": "The date should be in the format of YYYY-MM-DD or ~YYYY-MM-DD in GMT, CEST-2 timezone (service searches for the last clear day (cloud free, snow free = 0% of coverage) within 30 days)",
+        "fieldName": "date",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.request",
+        "doc": "Whether or not to use the extrapolated index (defaults to false)",
+        "fieldName": "extrapolation",
+        "type": "BooleanType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "request_"
+    },
+    {
+        "parent": "data.response",
+        "doc": "Outcome of the calculation.",
+        "fieldName": "success",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response",
+        "doc": "Calculation error message.",
+        "fieldName": "message",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "Link to the generated image of type JPG or TIFF or JSON. The link is valid for 6 hours",
+        "fieldName": "imageUrl",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "Numeric representation of the cloud coverage for the corresponding date where 0 means no clouds. The range is 0 to 1, where 1.0 - > 10% of the area is covered by clouds.",
+        "fieldName": "cloudCoverage",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "Numeric representation of the snow coverage for the corresponding date where 0 means no snow. The range is 0 to 1, where 1.0 - > 10% of the area is covered by snow",
+        "fieldName": "snowCoverage",
+        "type": "DoubleType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "Validity.",
+        "fieldName": "valid",
+        "type": "BooleanType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "S1_MAX value",
+        "fieldName": "s1Max",
+        "type": "DoubleType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "Growth scale unique identifier",
+        "fieldName": "growthScaleId",
+        "type": "StringType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "From growth scale stage unique identifier",
+        "fieldName": "fromGrowthStageId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "To growth scale stage unique identifier",
+        "fieldName": "toGrowthStageId",
+        "type": "UUIDType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.response.payload",
+        "doc": "The date when the image was captured",
+        "fieldName": "date",
+        "type": "DateType",
+        "isNullable": true,
+        "isPIIData": false,
+        "prefix": "response_payload_"
+    },
+    {
+        "parent": "data.configuration",
+        "fieldName": "solution",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false,
+        "prefix": "configuration_"
+    },
+    {
+        "parent": null,
+        "fieldName": "eventSource",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "eventType",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+    {
+        "parent": null,
+        "fieldName": "created_at",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    },
+	{
+        "parent": null,
+        "fieldName": "avroFilePath",
+        "type": "StringType",
+        "isNullable": false,
+        "isPIIData": false
+    }
+
+]

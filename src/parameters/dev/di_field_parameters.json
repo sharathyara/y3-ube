@@ -1,0 +1,16 @@
+{
+  "datalink_metastore_table_name": "",
+  "entity_event_types": "{\"insert\":\"FieldMigrated\",\"update\":\"none\",\"delete\":\"none\"}",
+  "entity_lock_file_name": "processing.lock",
+  "entity_processing_list_folder_name": "di_field",
+  "entity_schema_location": "s3://yara-das-ffdp-raw-eucentral1-479055760150-stage-stitch/schemas/di_field_schema.json",
+  "entity_source_bucket_name": "yara-das-ffdp-raw-eucentral1-479055760150-stage-stitch",
+  "glue_batch_max_limit": 200,
+  "glue_concurrency": 2,
+  "glue_job_name": "AvroFromS3ToMarketplaceHudiMultiTopicSubnetB",
+  "hudi_partition_field": "created_at",
+  "hudi_precombine_field": "dateTimeOccurred",
+  "hudi_record_key": "sourceFieldId",
+  "hudi_table_name": "di_field",
+  "metastore_table_name": "RawEventEntity_v6"
+}

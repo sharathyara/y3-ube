@@ -1,0 +1,8 @@
+{
+  "entity_event_types": "{\"insert\":\"SoilProductRecommendationV2Requested\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_processing_list_folder_name": "cnp-soil-product-recommendation-requested",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/cnp-soil-product-recommendation-requested_schema.json",
+  "glue_job_name": "TBD",
+  "hudi_record_key": "field_id",
+  "hudi_table_name": "cnp_soil_product_recommendation_requested"
+}

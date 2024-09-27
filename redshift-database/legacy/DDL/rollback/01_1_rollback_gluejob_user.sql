@@ -1,0 +1,3 @@
+REVOKE USAGE ON SCHEMA github_actions FROM gluejob;
+REVOKE INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA github_actions FROM gluejob;
+DROP USER gluejob;

@@ -1,0 +1,19 @@
+{
+	"name": "ube-farm-profile-organisations-jdbc-source",
+	"config": {
+		"connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+		"connection.url": "jdbc:redshift://ffdp-central-store-stage.ccmwbylgmqkt.eu-central-1.redshift.amazonaws.com:5439/ffdp_central_store",
+		"connection.user": "usrname",
+		"connection.password": "**********",
+		"connection.attempts": 3,
+		"topic.prefix": "topic_",
+		"schema.pattern": "farm_profile",
+		"table.whitelist": "users,organisations",
+		"mode": "timestamp",
+		"timestamp.column.name": "created_at,updated_at",
+		"validate.non.null": false,
+		"poll.interval.ms": 60000,
+		"batch.max.rows": 100,
+		"table.poll.interval.ms": 60000
+	}
+}

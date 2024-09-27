@@ -1,0 +1,16 @@
+{
+  "datalink_metastore_table_name": "DeleteDIUserEntity-dev",
+  "entity_event_types": "{\"insert\":\"YieldEstimationPerformed\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_lock_file_name": "processing.lock",
+  "entity_processing_list_folder_name": "polaris-yield-estimation-performed",
+  "entity_schema_location": "s3://ffdp-2-0-glue-etl-stack-stage-916386002389/schemas/polaris-yield-estimation-performed_schema.json",
+  "entity_source_bucket_name": "ffdp-raw-data-stage-916386002389",
+  "glue_batch_max_limit": 200,
+  "glue_concurrency": 2,
+  "glue_job_name": "hudi-init-load-job-eu-central-1a",
+  "hudi_partition_field": "created_at",
+  "hudi_precombine_field": "dateTimeOccurred",
+  "hudi_record_key": "id",
+  "hudi_table_name": "polaris_yield_estimation_performed",
+  "metastore_table_name": "RawEventEntity-stage"
+}

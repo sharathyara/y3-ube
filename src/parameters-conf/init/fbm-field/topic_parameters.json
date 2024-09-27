@@ -1,0 +1,9 @@
+{
+  "entity_event_types": "{\"insert\":\"FieldBoundaryDetailsRequestedV2,GFIDRequestedV2\",\"update\":\"NotDefined\",\"delete\":\"NotDefined\"}",
+  "entity_processing_list_folder_name": "fbm-field",
+  "entity_schema_location": "s3://$SCHEMA_BUCKET_NAME/schemas/fbm-field_schema.json",
+  "glue_batch_max_limit": 200,
+  "glue_job_name": "hudi-init-load-job-eu-central-1a",
+  "hudi_record_key": "generatedId",
+  "hudi_table_name": "fbm_field"
+}

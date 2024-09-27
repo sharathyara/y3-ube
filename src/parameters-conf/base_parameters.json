@@ -1,0 +1,8 @@
+{
+    "entity_lock_file_name": "processing.lock",
+    "hudi_record_key": "id",
+    "hudi_precombine_field": "dateTimeOccurred",
+    "hudi_partition_field": "created_at",
+    "glue_batch_max_limit": 100,
+    "glue_concurrency": 1
+}
